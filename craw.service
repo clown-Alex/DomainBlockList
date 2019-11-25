@@ -1,0 +1,15 @@
+[Unit]
+Description=test deamon
+After=rc-local.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/root/DomainBlockList
+ExecStart=/usr/bin/python3 craw.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
