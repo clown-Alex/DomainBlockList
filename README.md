@@ -38,7 +38,7 @@ The structure of the code is the following:
   * `DomainBlockList/Log`: log files
     
 ## FAQ
-**What can these trails can be used for?**
+**What can these trails be used for?**
 
  * They can be integrated into the firewall as rules.
  * They can be used for data mining, for example as the Feed of Peeker.
