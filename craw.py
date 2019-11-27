@@ -54,10 +54,12 @@ def run():
             subprocess.call(
                 "cd " + BASE_DIR + " && git commit -m 'auto push at " + time.asctime(
                     time.localtime(time.time())) + "'", shell=True)  # 加上当前系统的时间
+            subprocess.call("cd " + BASE_DIR + "&& git gc --prune=now", shell=True)
             subprocess.call("cd " + BASE_DIR + "&& git push github master", shell=True)
             subprocess.call("cd " + BASE_DIR + "&& git push gitee master", shell=True)
             logger.info('    [i] ' + str(round_num) + ' git push finished!')
             logger.info('[i] ' + str(round_num) + ' Round finished! Sleep 3600 sec')
+            round_num += 1
             time.sleep(3600)
 
         except:
