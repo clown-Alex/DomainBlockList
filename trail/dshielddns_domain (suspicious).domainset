@@ -1,10 +1,10 @@
 # 
 # dshielddns.py
-# Maintainer URL:dshield.org
-# Maintainer:DShield.org
-# List source URL:https://isc.sans.edu/feeds/suspiciousdomains_Low.txt
-# Source File Date:Mon Dec  2 17:36:09 2019
-# Category:domain (suspicious)
+# Maintainer URL: dshield.org
+# Maintainer: DShield.org
+# List source URL: https://isc.sans.edu/feeds/suspiciousdomains_Low.txt
+# Source File Date: Mon Dec  2 17:41:19 2019
+# Category: domain (suspicious)
 # 
 shell.rddos.com
 wpvgqh.com
