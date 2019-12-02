@@ -1,10 +1,10 @@
 # 
 # minerchk.py
-# github.com/Hestat
-# Hestat
-# https://raw.githubusercontent.com/Hestat/minerchk/master/hostslist.txt
-# Mon Dec  2 16:43:55 2019
-# crypto mining (suspicious)
+# Maintainer URL:github.com/Hestat
+# Maintainer:Hestat
+# List source URL:https://raw.githubusercontent.com/Hestat/minerchk/master/hostslist.txt
+# Source File Date:Mon Dec  2 17:36:31 2019
+# Category:crypto mining (suspicious)
 # 
 cloudflare.hashfor.cash
 cryptoescrow.eu

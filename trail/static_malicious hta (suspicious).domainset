@@ -1,10 +1,10 @@
 # 
 # static
-# (static)
-# xlh
-# (static)
-# Mon Dec  2 16:44:11 2019
-# malicious hta (suspicious)
+# Maintainer URL:(static)
+# Maintainer:xlh
+# List source URL:(static)
+# Source File Date:Mon Dec  2 17:36:47 2019
+# Category:malicious hta (suspicious)
 # 
 /out-761452637.hta
 /moonx.hta
@@ -125,6 +125,7 @@
 /azo.hta
 /po98989211.hta
 /out-1246717249.hta
+/microsoft.hta
 /myrrem.hta
 /out-1334992907.hta
 /out-1347051899.hta
