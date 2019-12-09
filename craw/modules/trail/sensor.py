@@ -11,6 +11,11 @@ import time
 
 sys.dont_write_bytecode = True
 
+class FeedInvalid(Exception):
+    def __init__(self,ErrorInfo):
+        self.errorinfo=ErrorInfo
+    def __str__(self):
+        return self.errorinfo
 
 class My_Craw(object):
     def __init__(self):
@@ -106,8 +111,12 @@ class My_Craw(object):
 
                             try:
                                 results = function()
+                                error_count = 0
                                 while len(results) == 0:
                                     results = function()
+                                    error_count+=1
+                                    if error_count >=100:
+                                        raise FeedInvalid(module.__url__ + ' url is invalid!' )
                                 classification = {}
                                 maintainer_url = module.maintainer_url
                                 maintainer = module.maintainer

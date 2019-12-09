@@ -3,7 +3,7 @@
 # Maintainer URL: (static)
 # Maintainer: xlh
 # List source URL: (static)
-# Source File Date: Mon Dec  9 17:12:25 2019
+# Source File Date: Mon Dec  9 17:26:05 2019
 # Category: malicious с2panel (suspicious)
 # 
 braithwalte.co.uk/ajjuu/admin.php
@@ -229,7 +229,11 @@ illegalfawn.com/panel.php
 /newsite/panelnew
 /android_panel
 /webpanel/inc
+/logz/auth.php
+/logz/login.php
 /panel123/auth.php
 /panel123/login.php
+/pnl/auth.php
 /pnl/login.php
+/webpanel/auth.php
 /webpanel/login.php
