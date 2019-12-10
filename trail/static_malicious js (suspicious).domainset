@@ -3,7 +3,7 @@
 # Maintainer URL: (static)
 # Maintainer: xlh
 # List source URL: (static)
-# Source File Date: Tue Dec 10 21:00:05 2019
+# Source File Date: Tue Dec 10 23:50:40 2019
 # Category: malicious js (suspicious)
 # 
 ads.voipnewswire.net/ad.js
@@ -534,3 +534,4 @@ live.sequracdn.net
 /paymentgetway.js
 2chat.top
 /js/authorizenetmagento.js
+/vmartgo.js
