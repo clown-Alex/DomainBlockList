@@ -3,7 +3,7 @@
 # Maintainer URL: (static)
 # Maintainer: xlh
 # List source URL: (static)
-# Source File Date: Wed Dec 18 05:54:30 2019
+# Source File Date: Wed Dec 18 06:56:52 2019
 # Category: malicious php (suspicious)
 # 
 /boxmrenewal.php
@@ -269,6 +269,10 @@ saleforyou.org
 /c/feed.php
 /c/form.php
 /home3e6e.php
+/processar_1.php
+/processar_1-1.php
+/processar_2.php
+/processar_2-2.php
 /canadiane-compte.php
 /gate.php
 /gate1.php
