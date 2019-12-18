@@ -11,11 +11,14 @@ import time
 
 sys.dont_write_bytecode = True
 
+
 class FeedInvalid(Exception):
-    def __init__(self,ErrorInfo):
-        self.errorinfo=ErrorInfo
+    def __init__(self, ErrorInfo):
+        self.errorinfo = ErrorInfo
+
     def __str__(self):
         return self.errorinfo
+
 
 class My_Craw(object):
     def __init__(self):
@@ -114,9 +117,9 @@ class My_Craw(object):
                                 error_count = 0
                                 while len(results) == 0:
                                     results = function()
-                                    error_count+=1
-                                    if error_count >=100:
-                                        raise FeedInvalid(module.__url__ + ' url is invalid!' )
+                                    error_count += 1
+                                    if error_count >= 100:
+                                        raise FeedInvalid(module.__url__ + ' url is invalid!')
                                 classification = {}
                                 maintainer_url = module.maintainer_url
                                 maintainer = module.maintainer
@@ -204,7 +207,8 @@ class My_Craw(object):
                                         os.mkdir(_temp_file_name)
                                     for _class in classification.items():
                                         write_dir = os.path.join(_temp_file_name,
-                                                                 _class[0].replace('/', '_') + '.domainset')
+                                                                 _class[0].replace('/', '_').replace(' ',
+                                                                                                     '_') + '.domainset')
                                         with self._fopen(write_dir, "w") as f:
                                             writer = csv.writer(f, delimiter=',', quotechar='\"',
                                                                 quoting=csv.QUOTE_MINIMAL)
@@ -213,7 +217,7 @@ class My_Craw(object):
                                             f.write('# ' + 'Maintainer URL: ' + maintainer_url + '\n')
                                             f.write('# ' + 'Maintainer: ' + maintainer + '\n')
                                             f.write('# ' + 'List source URL: ' + list_source_url + '\n')
-                                            f.write('# ' + 'Source File Date: '+ current_time + '\n')
+                                            f.write('# ' + 'Source File Date: ' + current_time + '\n')
                                             f.write('# ' + 'Category: ' + _class[0] + '\n')
                                             f.write('# \n')
                                             for item in _class[1]:
