@@ -206,7 +206,22 @@ class My_Craw(object):
                                     if not os.path.exists(_temp_file_name):
                                         os.mkdir(_temp_file_name)
                                     for _class in classification.items():
-                                        write_dir = os.path.join(_temp_file_name,
+                                        if _class[0].startswith('apt_'):
+                                            _class[0].replace('apt_', '')
+                                            if not os.path.exists(os.path.join(_temp_file_name, 'apt')):
+                                                os.mkdir(os.path.join(_temp_file_name, 'apt'))
+                                            write_dir = os.path.join(_temp_file_name, 'apt',
+                                                                     _class[0].replace('/', '_').replace(' ',
+                                                                                                         '_') + '.domainset')
+                                        elif _class[0].startswith('android_'):
+                                            _class[0].replace('android_', '')
+                                            if not os.path.exists(os.path.join(_temp_file_name, 'android')):
+                                                os.mkdir(os.path.join(_temp_file_name, 'android'))
+                                            write_dir = os.path.join(_temp_file_name, 'android',
+                                                                     _class[0].replace('/', '_').replace(' ',
+                                                                                                         '_') + '.domainset')
+                                        else:
+                                            write_dir = os.path.join(_temp_file_name,
                                                                  _class[0].replace('/', '_').replace(' ',
                                                                                                      '_') + '.domainset')
                                         with self._fopen(write_dir, "w") as f:
