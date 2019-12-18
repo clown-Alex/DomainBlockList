@@ -200,10 +200,12 @@ class My_Craw(object):
                                         os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))),
                                         'trail',
                                         temp_file_name.split('.')[0])
+                                    if not os.path.exists(_temp_file_name):
+                                        os.mkdir(_temp_file_name)
                                     for _class in classification.items():
-                                        with self._fopen(
-                                                (_temp_file_name + '_' + _class[0].replace('/', '_') + '.domainset'),
-                                                "w") as f:
+                                        write_dir = os.path.join(_temp_file_name,
+                                                                 _class[0].replace('/', '_') + '.domainset')
+                                        with self._fopen(write_dir, "w") as f:
                                             writer = csv.writer(f, delimiter=',', quotechar='\"',
                                                                 quoting=csv.QUOTE_MINIMAL)
                                             f.write('# \n')
